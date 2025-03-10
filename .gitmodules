@@ -4,3 +4,9 @@
 [submodule "deps/enoki"]
 	path = deps/enoki
 	url = https://github.com/mitsuba-renderer/enoki.git
+[submodule "deps/nanobind"]
+	path = deps/nanobind
+	url = https://github.com/wjakob/nanobind.git
+[submodule "deps/polyscope"]
+	path = deps/polyscope
+	url = https://github.com/nmwsharp/polyscope.git
