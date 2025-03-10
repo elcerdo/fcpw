@@ -8,8 +8,10 @@ void loadModuleLibrary(GPUContext& gpuContext,
                        const std::string& moduleLibrary,
                        Shader& shader)
 {
+    std::cout << "loadModuleLibrary \"" << moduleLibrary << "\"" << std::endl;
     Slang::Result loadModuleLibraryResult = shader.loadModuleLibrary(
         gpuContext.device, moduleLibrary.c_str());
+    std::cout << "loadModuleLibrary done" << std::endl;
 
     if (loadModuleLibraryResult != SLANG_OK) {
         std::cout << "failed to load " << moduleLibrary << " module library" << std::endl;
@@ -25,8 +27,10 @@ void loadShader(GPUContext& gpuContext,
                 const std::string& entryPointName,
                 Shader& shader)
 {
+    std::cout << "loadShader \"" << shaderModule << "\" \"" << entryPointName << "\"" << std::endl;
     Slang::Result loadComputeProgramResult = shader.loadComputeProgram(
         gpuContext.device, shaderModule.c_str(), entryPointName.c_str());
+    std::cout << "loadShader done" << std::endl;
 
     if (loadComputeProgramResult != SLANG_OK) {
         std::cout << "failed to load " << entryPointName << " compute program" << std::endl;

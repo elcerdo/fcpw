@@ -257,7 +257,7 @@ void run(bool useGpu)
         boxMax = boxMax.cwiseMax(p);
     }
 
-    int numQueryPoints = 100;
+    int numQueryPoints = 2048;
     std::vector<Vector<3>> queryPoints;
     Vector<3> boxExtent = boxMax - boxMin;
     for (int i = 0; i < numQueryPoints; i++) {
